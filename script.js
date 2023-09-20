@@ -4,6 +4,7 @@ const taskList = document.querySelector('.list-tasks')
 
 let tasks = []
 
+// Função para adicionar uma tarefa 
 function addTasks() {
     const taskText = input.value.trim()
 
@@ -23,6 +24,7 @@ function addTasks() {
     displayTasks()
 }
 
+// Função para exibir uma tarefa
 function displayTasks() {
     let newList = ''
 
@@ -43,18 +45,21 @@ function displayTasks() {
     localStorage.setItem('list', JSON.stringify(tasks))
 }
 
+// Função para confirmar execução de uma tarefa
 function checkTask(index) {
     tasks[index].check = !tasks[index].check
 
     displayTasks()
 }
 
+// Função para deletar uma tarefa
 function deleteTask(index) {
     tasks.splice(index, 1)
 
     displayTasks()
 }
 
+// Função para salvar as tarefas no local storage
 function rechargeTasks() {
     const tasksLocalStorage = localStorage.getItem('list')
 

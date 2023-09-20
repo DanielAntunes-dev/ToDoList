@@ -10,6 +10,11 @@ body {
     background: url("image/100-beautiful-background-png-picture-2-kYPQZQgEy.png")
 }
 
+h1 {
+    max-width: 300px;
+    margin: 100px auto 0;
+}
+
 .container {
     background-color: #d1d1d1;
     width: 500px;
@@ -36,7 +41,6 @@ body {
     padding: 0 15px;
     float: right;
     cursor: pointer;
-    /* font-weight: 700; */
 }
 
 .button-add-task:hover {
@@ -79,4 +83,29 @@ img {
 .done {
     background-color: #8fac55;
     text-decoration: line-through;
+}
+
+
+/* Aplica estilos específicos para telas menores */
+@media (max-width: 768px) {
+    .h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+    
+    .container {
+        width: 90%; /* Ajusta a largura em termos percentuais */
+        max-width: 90%; /* Define uma largura máxima */
+    }
+    
+    .input-task {
+        width: 100%; /* Ajusta a largura para ser 100% do elemento pai */
+    }
+    
+    .button-add-task {
+        width: 100%; /* Ajusta a largura para ser 100% do elemento pai */
+    }
+    
+    .task {
+        margin-bottom: 10px; /* Ajusta a margem inferior */
+    }
 }
